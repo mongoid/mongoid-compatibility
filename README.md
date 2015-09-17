@@ -21,15 +21,21 @@ gem 'mongoid-compatibility'
 #### Mongoid::Compatibility::Version
 
 ```
-Mongoid::Compatibility::Version.mongoid3? # => is this Mongoid 3.x?
-Mongoid::Compatibility::Version.mongoid4? # => is this Mongoid 4.x?
-Mongoid::Compatibility::Version.mongoid5? # => is this Mongoid 5.x?
+Mongoid::Compatibility::Version.mongoid3?
+  # => is this Mongoid 3.x?
+
+Mongoid::Compatibility::Version.mongoid4?
+  # => is this Mongoid 4.x?
+
+Mongoid::Compatibility::Version.mongoid5?
+  # => is this Mongoid 5.x?
 ```
 
 #### Mongoid::Compatibility::ObjectId
 
 ```
-Mongoid::Compatibility::ObjectId.legal?('4e4d66343b39b68407000001') # => is this a valid BSON ID?
+Mongoid::Compatibility::ObjectId.legal?('4e4d66343b39b68407000001')
+  # => is this a valid BSON ID?
 ```
 
 ### Contribute
