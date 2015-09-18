@@ -16,6 +16,8 @@ Add `mongoid-compatibility` to your Gemfile.
 gem 'mongoid-compatibility'
 ```
 
+You may explicitly need to `require mongoid/compatibility`.
+
 ### Use
 
 #### Mongoid::Compatibility::Version

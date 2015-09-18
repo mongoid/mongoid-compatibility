@@ -1,5 +1,5 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'mongoid-compatibility/self'
+require 'mongoid/compatibility/self'
 
 Gem::Specification.new do |s|
   s.name = 'mongoid-compatibility'

@@ -1,6 +1,1 @@
-require 'mongoid'
-require 'active_support'
-
-require 'mongoid-compatibility/self'
-require 'mongoid-compatibility/version'
-require 'mongoid-compatibility/object_id'
+require 'mongoid/compatibility'
