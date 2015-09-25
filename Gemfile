@@ -11,7 +11,7 @@ when /^3/
   gem 'mongoid', '~> 3.1'
 when /^2/
   gem 'mongoid', '~> 2.0'
-  gem 'bson_ext'
+  gem 'bson_ext', platforms: :ruby
 else
   gem 'mongoid', version
 end
