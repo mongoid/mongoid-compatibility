@@ -1,17 +1,17 @@
 module Mongoid
   module Compatibility
     module Version
-      def self.mongoid3?
-        Mongoid::VERSION =~ /^3\./
+      module ClassMethods
+        (2..5).each do |v|
+          const_set "V#{v}", Mongoid::VERSION =~ Regexp.new("^#{v}\.")
+
+          define_method "mongoid#{v}?" do
+            !!const_get("ClassMethods::V#{v}")
+          end
+        end
       end
 
-      def self.mongoid4?
-        Mongoid::VERSION =~ /^4\./
-      end
-
-      def self.mongoid5?
-        Mongoid::VERSION =~ /^5\./
-      end
+      extend ClassMethods
     end
   end
 end

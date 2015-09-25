@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/dblock/mongoid-compatibility'
   s.licenses = ['MIT']
   s.summary = 'Compatibility helpers for Mongoid.'
-  s.add_dependency 'mongoid', '>= 3.0.0'
+  s.add_dependency 'mongoid', '>= 2.0'
   s.add_dependency 'activesupport'
 end

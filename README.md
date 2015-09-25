@@ -23,6 +23,9 @@ You may explicitly need to `require mongoid/compatibility`.
 #### Mongoid::Compatibility::Version
 
 ```
+Mongoid::Compatibility::Version.mongoid2?
+  # => is this Mongoid 2.x?
+
 Mongoid::Compatibility::Version.mongoid3?
   # => is this Mongoid 3.x?
 

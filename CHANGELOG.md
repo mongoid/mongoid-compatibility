@@ -1,5 +1,7 @@
 ### 0.2.1 (Next)
 
+* Compatibility with Mongoid 2 - [@dblock](https://github.com/dblock).
+* Use constants to yield version, avoid matching regexp every time - [@dblock](https://github.com/dblock).
 * Your contribution here.
 
 ### 0.2.0 (2015/09/18)
