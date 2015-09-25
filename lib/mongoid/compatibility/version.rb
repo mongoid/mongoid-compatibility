@@ -6,7 +6,7 @@ module Mongoid
           const_set "V#{v}", Mongoid::VERSION =~ Regexp.new("^#{v}\.")
 
           define_method "mongoid#{v}?" do
-            !!const_get("ClassMethods::V#{v}")
+            !!Mongoid::Compatibility::Version::ClassMethods.const_get("V#{v}")
           end
         end
       end
