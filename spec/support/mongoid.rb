@@ -8,6 +8,8 @@ elsif Mongoid::Compatibility::Version.mongoid4?
   Mongoid.load! 'spec/config/mongoid4.yml'
 elsif Mongoid::Compatibility::Version.mongoid5?
   Mongoid.load! 'spec/config/mongoid5.yml'
+elsif Mongoid::Compatibility::Version.mongoid6?
+  Mongoid.load! 'spec/config/mongoid6.yml'
 else
   fail "unsupported Mongoid version #{Mongoid::VERSION}"
 end
