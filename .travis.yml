@@ -1,9 +1,10 @@
 rvm:
+  - 2.3
   - 2.2
   - 2.1.1
   - 2.0.0
   - 1.9.3
-  - rbx-2.2.10
+  - rbx-2
   - jruby-19mode
 
 services:
@@ -15,3 +16,6 @@ env:
   - MONGOID_VERSION=4
   - MONGOID_VERSION=5
 
+matrix:
+  allow_failures:
+    - rvm: rbx-2
