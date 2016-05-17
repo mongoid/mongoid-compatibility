@@ -12,7 +12,7 @@ describe Mongoid::Compatibility::Version do
     it 'defines version methods' do
       expect(Mongoid::Compatibility::Version.methods - Object.methods).to_not eq []
     end
-    (2..5).each do |v|
+    (2..6).each do |v|
       context "mongoid #{v}" do
         it "responds to mongoid#{v}?" do
           expect(Mongoid::Compatibility::Version).to respond_to("mongoid#{v}?")
