@@ -6,7 +6,7 @@ Mongoid::Compatibility
 [![Dependency Status](https://gemnasium.com/dblock/mongoid-compatibility.svg)](https://gemnasium.com/dblock/mongoid-compatibility)
 [![Code Climate](https://codeclimate.com/github/dblock/mongoid-compatibility.svg)](https://codeclimate.com/github/dblock/mongoid-compatibility)
 
-Compatibility helpers for Mongoid 2, 3, 4, 5, and 6.
+Compatibility helpers for Mongoid versions 2, 3, 4, and 5, and the **prerelease** version 6.
 
 ### Install
 

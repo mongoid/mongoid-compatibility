@@ -1,7 +1,9 @@
-### 0.3.2 (Next)
+### Next Release
+* Your contribution here!
 
-* Compatibility with Mongoid 6 - [@phyllisstein](https://github.com/phyllisstein).
-* Your contribution here.
+### 0.4.0 (2016/05/21)
+
+* Compatibility with Mongoid 6 prerelease - [@phyllisstein](https://github.com/phyllisstein).
 
 ### 0.3.1 (2015/09/25)
 
