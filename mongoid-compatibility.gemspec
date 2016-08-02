@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.6'
   s.files = `git ls-files`.split("\n")
   s.require_paths = ['lib']
-  s.homepage = 'http://github.com/dblock/mongoid-compatibility'
+  s.homepage = 'http://github.com/mongoid/mongoid-compatibility'
   s.licenses = ['MIT']
   s.summary = 'Compatibility helpers for Mongoid.'
   s.add_dependency 'mongoid', '>= 2.0'

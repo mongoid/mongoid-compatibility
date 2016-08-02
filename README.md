@@ -2,9 +2,9 @@ Mongoid::Compatibility
 =======================
 
 [![Gem Version](http://img.shields.io/gem/v/mongoid-compatibility.svg)](http://badge.fury.io/rb/mongoid-compatibility)
-[![Build Status](http://img.shields.io/travis/dblock/mongoid-compatibility.svg)](https://travis-ci.org/dblock/mongoid-compatibility)
-[![Dependency Status](https://gemnasium.com/dblock/mongoid-compatibility.svg)](https://gemnasium.com/dblock/mongoid-compatibility)
-[![Code Climate](https://codeclimate.com/github/dblock/mongoid-compatibility.svg)](https://codeclimate.com/github/dblock/mongoid-compatibility)
+[![Build Status](http://img.shields.io/travis/mongoid/mongoid-compatibility.svg)](https://travis-ci.org/mongoid/mongoid-compatibility)
+[![Dependency Status](https://gemnasium.com/mongoid/mongoid-compatibility.svg)](https://gemnasium.com/mongoid/mongoid-compatibility)
+[![Code Climate](https://codeclimate.com/github/mongoid/mongoid-compatibility.svg)](https://codeclimate.com/github/mongoid/mongoid-compatibility)
 
 Compatibility helpers for Mongoid versions 2, 3, 4, and 5, and the **prerelease** version 6.
 

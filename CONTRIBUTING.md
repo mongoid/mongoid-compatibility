@@ -1,16 +1,16 @@
 Contributing to Mongoid::Compatibility
 =======================================
 
-Mongoid::Compatibility is work of [many of contributors](https://github.com/dblock/mongoid-compatibility/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/dblock/mongoid-compatibility/pulls), [propose features, ask questions and discuss issues](https://github.com/dblock/mongoid-compatibility/issues).
+Mongoid::Compatibility is work of [many of contributors](https://github.com/mongoid/mongoid-compatibility/graphs/contributors). You're encouraged to submit [pull requests](https://github.com/mongoid/mongoid-compatibility/pulls), [propose features, ask questions and discuss issues](https://github.com/mongoid/mongoid-compatibility/issues).
 
 #### Fork the Project
 
-Fork the [project on Github](https://github.com/dblock/mongoid-compatibility) and check out your copy.
+Fork the [project on Github](https://github.com/mongoid/mongoid-compatibility) and check out your copy.
 
 ```
 git clone https://github.com/contributor/mongoid-compatibility.git
 cd mongoid-compatibility
-git remote add upstream https://github.com/dblock/mongoid-compatibility.git
+git remote add upstream https://github.com/mongoid/mongoid-compatibility.git
 ```
 
 #### Create a Topic Branch
@@ -95,7 +95,7 @@ git push origin my-feature-branch -f
 Update the [CHANGELOG](CHANGELOG.md) with the pull request number. A typical entry looks as follows.
 
 ```
-* [#123](https://github.com/dblock/mongoid-compatibility/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
+* [#123](https://github.com/mongoid/mongoid-compatibility/pull/123): Reticulated splines - [@contributor](https://github.com/contributor).
 ```
 
 Amend your previous commit and force push the changes.
