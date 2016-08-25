@@ -1,4 +1,6 @@
 ### Next Release
+
+* [#3](https://github.com/mongoid/mongoid-compatibility/pull/3): Added Danger, PR linter - [@dblock](https://github.com/dblock).
 * Your contribution here!
 
 ### 0.4.0 (2016/05/21)
