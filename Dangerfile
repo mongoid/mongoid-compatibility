@@ -1,1 +1,1 @@
-# inherits from https://github.com/mongoid/danger
+danger.import_dangerfile(gem: 'mongoid-danger')
