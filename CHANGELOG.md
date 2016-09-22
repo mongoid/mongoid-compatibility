@@ -1,5 +1,6 @@
 ### 0.4.1 (Next)
 
+* [#5](https://github.com/mongoid/mongoid-compatibility/pull/5): Compatibility with Mongoid 6.0 - [@moodlemags](https://github.com/moodlemags).
 * [#4](https://github.com/mongoid/mongoid-compatibility/pull/4): Use the `mongoid-danger` gem - [@dblock](https://github.com/dblock).
 * [#3](https://github.com/mongoid/mongoid-compatibility/pull/3): Added Danger, PR linter - [@dblock](https://github.com/dblock).
 * Your contribution here.
