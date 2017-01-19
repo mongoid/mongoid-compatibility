@@ -1,3 +1,7 @@
+### 0.4.2 (Next)
+
+* Your contribution here.
+
 ### 0.4.1 (2017/01/19)
 
 * [#5](https://github.com/mongoid/mongoid-compatibility/pull/5): Compatibility with Ruby 2.4.0 and Mongoid 6.0 - [@moodlemags](https://github.com/moodlemags).
