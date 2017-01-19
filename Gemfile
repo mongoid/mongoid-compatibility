@@ -22,10 +22,10 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'mongoid-danger', '~> 0.1.0', require: false
+  gem 'mongoid-danger', '~> 0.1.1', require: false
 end
 
 group :development do
-  gem 'rake'
+  gem 'rake', '< 12'
   gem 'rubocop', '0.33.0'
 end
