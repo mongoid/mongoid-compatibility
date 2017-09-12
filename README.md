@@ -6,7 +6,7 @@ Mongoid::Compatibility
 [![Dependency Status](https://gemnasium.com/mongoid/mongoid-compatibility.svg)](https://gemnasium.com/mongoid/mongoid-compatibility)
 [![Code Climate](https://codeclimate.com/github/mongoid/mongoid-compatibility.svg)](https://codeclimate.com/github/mongoid/mongoid-compatibility)
 
-Compatibility helpers for Mongoid versions 2, 3, 4, 5 and 6.
+Compatibility helpers for Mongoid versions 2, 3, 4, 5, 6 and 7.
 
 ### Install
 
@@ -37,6 +37,9 @@ Mongoid::Compatibility::Version.mongoid5?
 
 Mongoid::Compatibility::Version.mongoid6?
   # => is this Mongoid 6.x?
+
+Mongoid::Compatibility::Version.mongoid7?
+  # => is this Mongoid 7.x?
 ```
 
 #### Mongoid::Compatibility::ObjectId

@@ -1,5 +1,6 @@
 ### 0.4.2 (Next)
 
+* [#10](https://github.com/mongoid/mongoid-compatibility/pull/10): Compatibility with Mongoid 7.x - [@joeyAghion](https://github.com/joeyAghion).
 * Your contribution here.
 
 ### 0.4.1 (2017/01/19)
