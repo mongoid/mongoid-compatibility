@@ -1,5 +1,6 @@
 ### 0.5.1 (Next)
 
+* [#8](https://github.com/mongoid/mongoid-compatibility/issues/8): Added `mongoidX_or_newer?` and `mongoidX_or_older?` helpers - [@dblock](https://github.com/dblock).
 * Your contribution here.
 
 ### 0.5.0
