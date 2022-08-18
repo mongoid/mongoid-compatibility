@@ -67,6 +67,6 @@ See [CONTRIBUTING](CONTRIBUTING.md).
 
 ### Copyright and License
 
-Copyright Daniel Doubrovkine and Contributors, Artsy Inc., 2015-2017
+Copyright Daniel Doubrovkine and Contributors, Artsy Inc., 2015-2022
 
 [MIT License](LICENSE.md)
