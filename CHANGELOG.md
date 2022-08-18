@@ -1,6 +1,8 @@
 ### 0.6.0 (Next)
 
 * [#13](https://github.com/mongoid/mongoid-compatibility/pull/13): Compatibility with Mongoid 8.x - [@joe1chen](https://github.com/joe1chen).
+* [#15](https://github.com/mongoid/mongoid-compatibility/pull/15): Upgraded to mongoid-danger 0.2.0 - [@dblock](https://github.com/dblock).
+* Your contribution here.
 
 ### 0.5.1 (2017-12-02)
 
