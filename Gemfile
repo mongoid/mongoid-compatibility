@@ -26,7 +26,6 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'mongoid-danger', '~> 0.1.1', require: false
 end
 
 group :development do
