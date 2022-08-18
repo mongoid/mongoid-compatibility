@@ -1,3 +1,7 @@
+### 0.6.1 (Next)
+
+* Your contribution here.
+
 ### 0.6.0 (2022/08/18)
 
 * [#13](https://github.com/mongoid/mongoid-compatibility/pull/13): Compatibility with Mongoid 8.x - [@joe1chen](https://github.com/joe1chen).
