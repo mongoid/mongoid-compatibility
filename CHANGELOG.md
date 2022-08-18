@@ -1,14 +1,13 @@
-### 0.6.0 (Next)
+### 0.6.0 (2022/08/18)
 
 * [#13](https://github.com/mongoid/mongoid-compatibility/pull/13): Compatibility with Mongoid 8.x - [@joe1chen](https://github.com/joe1chen).
 * [#15](https://github.com/mongoid/mongoid-compatibility/pull/15): Upgraded to mongoid-danger 0.2.0 - [@dblock](https://github.com/dblock).
-* Your contribution here.
 
-### 0.5.1 (2017-12-02)
+### 0.5.1 (2017/12/02)
 
 * [#8](https://github.com/mongoid/mongoid-compatibility/issues/8): Added `mongoidX_or_newer?` and `mongoidX_or_older?` helpers - [@dblock](https://github.com/dblock).
 
-### 0.5.0 (2017-09-13)
+### 0.5.0 (2017/09/13)
 
 * [#10](https://github.com/mongoid/mongoid-compatibility/pull/10): Compatibility with Mongoid 7.x - [@joeyAghion](https://github.com/joeyAghion).
 
