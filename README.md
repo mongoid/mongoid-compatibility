@@ -2,11 +2,11 @@ Mongoid::Compatibility
 =======================
 
 [![Gem Version](http://img.shields.io/gem/v/mongoid-compatibility.svg)](http://badge.fury.io/rb/mongoid-compatibility)
-[![Build Status](http://img.shields.io/travis/mongoid/mongoid-compatibility.svg)](https://travis-ci.org/mongoid/mongoid-compatibility)
+[![Build Status](https://github.com/mongoid/mongoid-compatibility/actions/workflows/test.yml/badge.svg)](https://github.com/mongoid/mongoid-compatibility/actions)
 [![Dependency Status](https://gemnasium.com/mongoid/mongoid-compatibility.svg)](https://gemnasium.com/mongoid/mongoid-compatibility)
 [![Code Climate](https://codeclimate.com/github/mongoid/mongoid-compatibility.svg)](https://codeclimate.com/github/mongoid/mongoid-compatibility)
 
-Compatibility helpers for Mongoid versions 2, 3, 4, 5, 6 and 7.
+Compatibility helpers for Mongoid versions 2, 3, 4, 5, 6, 7, and 8.
 
 ### Install
 
@@ -40,13 +40,16 @@ Mongoid::Compatibility::Version.mongoid6?
 
 Mongoid::Compatibility::Version.mongoid7?
   # => is this Mongoid 7.x?
+  
+Mongoid::Compatibility::Version.mongoid8?
+  # => is this Mongoid 8.x?
 ```
 
-Instead of checking for Mongoid 6 and 7, use `newer` and `older` helpers.
+Instead of checking for Mongoid 6 and 7 and 8, use `newer` and `older` helpers.
 
 ``` ruby
 Mongoid::Compatibility::Version.mongoid6_or_newer?
-  # => is this Mongoid 6.x or 7.x, including beta 7?
+  # => is this Mongoid 6.x or 7.x or 8.x, including beta 8?
 
 Mongoid::Compatibility::Version.mongoid5_or_older?
   # => is this Mongoid 2.x, 3.x, 4.x or 5.x?

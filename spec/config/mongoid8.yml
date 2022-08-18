@@ -1,0 +1,8 @@
+test:
+  clients:
+    default:
+      database: mongoid-compatibility
+      hosts:
+        - localhost:27017
+  options:
+    raise_not_found_error: false

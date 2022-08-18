@@ -1,0 +1,80 @@
+name: CI RSpec Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: >-
+      Mongoid ${{ matrix.entry.mongoid }} - Ruby ${{ matrix.entry.ruby }} - MongoDB ${{ matrix.entry.mongodb }}
+    env:
+      CI: true
+      TESTOPTS: -v
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    strategy:
+      matrix:
+        entry:
+          - { ruby: "2.1", mongoid: "3",   bundler: "1", mongodb: "3.6" }
+          - { ruby: "2.1", mongoid: "4",   bundler: "1", mongodb: "3.6" }
+          - { ruby: "2.2", mongoid: "4",   bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.2", mongoid: "5",   bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.3", mongoid: "5",   bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.4", mongoid: "6.1", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.5", mongoid: "6.2", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.5", mongoid: "6.4", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.6", mongoid: "7.4", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.6", mongoid: "7.5", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "3.6" }
+          - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "3.6" }
+          - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "3.6" }
+          - { ruby: "2.5", mongoid: "6.4", bundler: "2", mongodb: "4.0" }
+          - { ruby: "2.6", mongoid: "7.4", bundler: "2", mongodb: "4.0" }
+          - { ruby: "2.6", mongoid: "7.5", bundler: "2", mongodb: "4.0" }
+          - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "4.0" }
+          - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "4.0" }
+          - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "4.0" }
+          - { ruby: "2.5", mongoid: "6.4", bundler: "2", mongodb: "4.2" }
+          - { ruby: "2.6", mongoid: "7.4", bundler: "2", mongodb: "4.2" }
+          - { ruby: "2.6", mongoid: "7.5", bundler: "2", mongodb: "4.2" }
+          - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "4.2" }
+          - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "4.2" }
+          - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "4.2" }
+          - { ruby: "2.5", mongoid: "6.4", bundler: "2", mongodb: "4.4" }
+          - { ruby: "2.6", mongoid: "7.4", bundler: "2", mongodb: "4.4" }
+          - { ruby: "2.6", mongoid: "7.5", bundler: "2", mongodb: "4.4" }
+          - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "4.4" }
+          - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "4.4" }
+          - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "4.4" }
+          - { ruby: "2.5", mongoid: "6.4", bundler: "2", mongodb: "5.0" }
+          - { ruby: "2.6", mongoid: "7.4", bundler: "2", mongodb: "5.0" }
+          - { ruby: "2.6", mongoid: "7.5", bundler: "2", mongodb: "5.0" }
+          - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "5.0" }
+          - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "5.0" }
+          - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "5.0" }
+    steps:
+      - name: repo checkout
+        uses: actions/checkout@v2
+
+      - name: start mongodb
+        uses: supercharge/mongodb-github-action@1.6.0
+        with:
+          mongodb-version: ${{ matrix.entry.mongodb }}
+          mongodb-replica-set: rs0
+
+      - name: load ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.entry.ruby }}
+          bundler: ${{ matrix.entry.bundler }}
+
+      - name: bundle install
+        run:  bundle install --jobs 4 --retry 3
+        env:
+          MONGOID_VERSION: ${{ matrix.entry.mongoid }}
+
+      - name: test
+        timeout-minutes: 10
+        run: bundle exec rspec spec
+        continue-on-error: false
+        env:
+          MONGOID_VERSION: ${{ matrix.entry.mongoid }}
