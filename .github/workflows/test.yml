@@ -51,6 +51,7 @@ jobs:
           - { ruby: "2.7", mongoid: "7.5", bundler: "2", mongodb: "5.0" }
           - { ruby: "3.0", mongoid: "8.0", bundler: "2", mongodb: "5.0" }
           - { ruby: "3.1", mongoid: "8.0", bundler: "2", mongodb: "5.0" }
+          - { ruby: "3.1", mongoid: "9.0", bundler: "2", mongodb: "5.0" }
     steps:
       - name: repo checkout
         uses: actions/checkout@v2
