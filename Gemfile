@@ -2,9 +2,11 @@ source 'http://rubygems.org'
 
 gemspec
 
-case version = ENV['MONGOID_VERSION'] || '8.0.2'
+case version = ENV['MONGOID_VERSION'] || '9.0.0'
 when 'HEAD'
   gem 'mongoid', github: 'mongodb/mongoid'
+when /^9/
+  gem 'mongoid', '~> 9.0'
 when /^8/
   gem 'mongoid', '~> 8.0'
 when /^7/
