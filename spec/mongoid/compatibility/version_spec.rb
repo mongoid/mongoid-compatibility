@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mongoid::Compatibility::Version do
@@ -34,7 +36,7 @@ describe Mongoid::Compatibility::Version do
     (2..9).each do |v|
       context "mongoid #{v}" do
         before do
-          stub_const('::Mongoid::VERSION', "#{v}")
+          stub_const('::Mongoid::VERSION', v.to_s)
           stub_const("::Mongoid::Compatibility::Version::ClassMethods::V#{v}", 1)
         end
         it "responds to mongoid#{v}?" do

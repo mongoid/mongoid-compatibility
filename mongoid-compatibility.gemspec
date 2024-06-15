@@ -1,4 +1,6 @@
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'mongoid/compatibility/self'
 
 Gem::Specification.new do |s|
@@ -13,6 +15,11 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/mongoid/mongoid-compatibility'
   s.licenses = ['MIT']
   s.summary = 'Compatibility helpers for Mongoid.'
-  s.add_dependency 'mongoid', '>= 2.0'
   s.add_dependency 'activesupport'
+  s.add_dependency 'mongoid', '>= 2.0'
+
+  s.add_development_dependency 'appraisal', '~> 2.0'
+  s.add_development_dependency 'rake', '< 12'
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rubocop', '~> 1.36.0'
 end

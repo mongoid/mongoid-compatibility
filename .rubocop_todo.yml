@@ -11,6 +11,15 @@
 Metrics/LineLength:
   Max: 118
 
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - 'mongoid-compatibility.gemspec'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+
 # Offense count: 4
 Style/Documentation:
   Exclude:

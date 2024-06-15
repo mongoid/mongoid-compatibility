@@ -7,27 +7,22 @@ matrix:
       script:
         - bundle exec danger
     - rvm: 2.4.0
-      env:
-        - MONGOID_VERSION=7
+      gemfile: gemfiles/mongoid_9.gemfile
     - rvm: 2.4.0
-      env:
-        - MONGOID_VERSION=6
+      gemfile: gemfiles/mongoid_8.gemfile
+    - rvm: 2.4.0
+      gemfile: gemfiles/mongoid_7.gemfile
+    - rvm: 2.4.0
+      gemfile: gemfiles/mongoid_6.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=6
+      gemfile: gemfiles/mongoid_6.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=5
+      gemfile: gemfiles/mongoid_5.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=4
+      gemfile: gemfiles/mongoid_4.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=3
+      gemfile: gemfiles/mongoid_3.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=2
+      gemfile: gemfiles/mongoid_2.gemfile
     - rvm: 2.3.1
-      env:
-        - MONGOID_VERSION=HEAD
-    - rvm: 2.3.0
+      gemfile: gemfiles/mongoid_head.gemfile

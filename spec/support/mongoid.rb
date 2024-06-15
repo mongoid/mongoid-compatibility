@@ -1,4 +1,4 @@
-ENV['MONGOID_ENV'] = 'test'
+# frozen_string_literal: true
 
 if Mongoid::Compatibility::Version.mongoid2?
   Mongoid.load! 'spec/config/mongoid2.yml'
@@ -17,7 +17,7 @@ elsif Mongoid::Compatibility::Version.mongoid8?
 elsif Mongoid::Compatibility::Version.mongoid9?
   Mongoid.load! 'spec/config/mongoid9.yml'
 else
-  fail "unsupported Mongoid version #{Mongoid::VERSION}"
+  raise "unsupported Mongoid version #{Mongoid::VERSION}"
 end
 
 RSpec.configure do |config|
