@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   build:
     name: >-
-      Mongoid Test with: (ruby=${{ matrix.entry.ruby }}, mongodb=${{ matrix.entry.mongodb }}), gemfile=${{ matrix.entry.gemfile }})
+      Mongoid Test with: - Ruby ${{ matrix.entry.ruby }} - MongoDB ${{ matrix.entry.mongodb }} - Gemfile ${{ matrix.entry.gemfile }})
     env:
       CI: true
       BUNDLE_GEMFILE: gemfiles/${{ matrix.entry.gemfile }}.gemfile
