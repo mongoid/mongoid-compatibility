@@ -16,7 +16,6 @@ jobs:
       matrix:
         entry:
           - { ruby: "2.1", gemfile: 'mongoid_3', bundler: "1", mongodb: "3.6" }
-          - { ruby: "2.1", gemfile: 'mongoid_3', bundler: "1", mongodb: "3.6" }
           - { ruby: "2.1", gemfile: 'mongoid_4', bundler: "1", mongodb: "3.6" }
           - { ruby: "2.2", gemfile: 'mongoid_4', bundler: "2", mongodb: "3.6" }
           - { ruby: "2.2", gemfile: 'mongoid_5', bundler: "2", mongodb: "3.6" }
