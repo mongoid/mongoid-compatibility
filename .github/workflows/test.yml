@@ -8,6 +8,7 @@ jobs:
       Mongoid Test with: - Ruby ${{ matrix.entry.ruby }} - MongoDB ${{ matrix.entry.mongodb }} - Gemfile ${{ matrix.entry.gemfile }})
     env:
       CI: true
+      TESTOPTS: "-v"
       BUNDLE_GEMFILE: gemfiles/${{ matrix.entry.gemfile }}.gemfile
     runs-on: ubuntu-latest
     continue-on-error: false
