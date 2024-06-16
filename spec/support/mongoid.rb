@@ -17,7 +17,7 @@ elsif Mongoid::Compatibility::Version.mongoid8?
 elsif Mongoid::Compatibility::Version.mongoid9?
   Mongoid.load! 'spec/config/mongoid9.yml'
 else
-  raise "unsupported Mongoid version #{Mongoid::VERSION}"
+  fail "unsupported Mongoid version #{Mongoid::VERSION}"
 end
 
 RSpec.configure do |config|
