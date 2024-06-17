@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Mongoid::Compatibility::Version do
   context 'mongoid? methods' do
     it 'only true for one version' do
-      expect((2..8).one? do |v|
+      expect((2..9).one? do |v|
         Mongoid::Compatibility::Version.send("mongoid#{v}?")
       end).to be true
     end
@@ -31,10 +33,10 @@ describe Mongoid::Compatibility::Version do
         expect(Mongoid::Compatibility::Version.send("mongoid#{version}_or_older?")).to be true
       end
     end
-    (2..8).each do |v|
+    (2..9).each do |v|
       context "mongoid #{v}" do
         before do
-          stub_const('::Mongoid::VERSION', "#{v}")
+          stub_const('::Mongoid::VERSION', v.to_s)
           stub_const("::Mongoid::Compatibility::Version::ClassMethods::V#{v}", 1)
         end
         it "responds to mongoid#{v}?" do

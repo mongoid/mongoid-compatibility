@@ -1,5 +1,6 @@
-### 0.6.1 (Next)
+### 1.0.0 (Next)
 
+* [#16](https://github.com/mongoid/mongoid-compatibility/pull/16): Add support for Mongoid 9 - [@saisrinivasan](https://github.com/SairamSrinivasan).
 * Your contribution here.
 
 ### 0.6.0 (2022/08/18)

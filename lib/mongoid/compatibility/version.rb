@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Mongoid
   module Compatibility
     module Version
       module ClassMethods
-        (2..8).each do |v|
+        (2..9).each do |v|
           const_set "V#{v}", Mongoid::VERSION =~ Regexp.new("^#{v}\.")
 
           define_method "mongoid#{v}?" do
