@@ -5,7 +5,9 @@ Mongoid::Compatibility
 [![Build Status](https://github.com/mongoid/mongoid-compatibility/actions/workflows/test.yml/badge.svg)](https://github.com/mongoid/mongoid-compatibility/actions)
 [![Code Climate](https://codeclimate.com/github/mongoid/mongoid-compatibility.svg)](https://codeclimate.com/github/mongoid/mongoid-compatibility)
 
-Compatibility helpers for Mongoid versions 2, 3, 4, 5, 6, 7, and 8.
+[Tested](https://github.com/mongoid/mongoid-locker/actions) against:
+- MRI: `2.6.x`, `2.7.x`, `3.0.x`, `3.1.x`, `3.2.x`
+- Compatibility helpers for Mongoid versions 2, 3, 4, 5, 6, 7, and 8.
 
 ### Install
 
