@@ -15,44 +15,44 @@ jobs:
     strategy:
       matrix:
         entry:
-          - { ruby: "2.6", gemfile: 'mongoid_3', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_4', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_4', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_5', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_5', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', bundler: "2", mongodb: "3.6" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', bundler: "2", mongodb: "3.6" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', bundler: "2", mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.2" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.2" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.2" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.4" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', bundler: "2", mongodb: "4.4" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.4" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', bundler: "2", mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', bundler: "2", mongodb: "5.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "5.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', bundler: "2", mongodb: "5.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', bundler: "2", mongodb: "5.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', bundler: "2", mongodb: "5.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', bundler: "2", mongodb: "5.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_9', bundler: "2", mongodb: "5.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_3', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_4', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_4', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_5', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_5', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "3.6" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "3.6" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "3.6" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "3.6" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.0" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.0" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.2" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.2" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.2" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.2" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.2" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.2" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.4" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.4" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.4" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.4" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.4" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.4" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "5.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "5.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "5.0" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "5.0" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "5.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "5.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "5.0" }
     steps:
       - name: Set up MongoDB ${{ matrix.entry.mongodb }}
         uses: supercharge/mongodb-github-action@1.8.0
@@ -63,7 +63,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.entry.ruby }}
-          bundler: '${{ matrix.entry.bundler || 1 }}'
+          bundler: '2'
           bundler-cache: true
       - name: Run tests
         run: bundle exec rake
