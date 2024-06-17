@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongoid', '>= 2.0'
 
   s.add_development_dependency 'appraisal', '~> 2.0'
+  s.add_development_dependency 'mongoid-danger', '~> 0.2'
   s.add_development_dependency 'rake', '< 12'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop', '~> 1.36.0'
-  s.add_development_dependency 'mongoid-danger', '~> 0.2'
 end
