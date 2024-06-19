@@ -53,6 +53,20 @@ jobs:
           - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "5.0" }
           - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "5.0" }
           - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "5.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "6.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "6.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "6.0" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "6.0" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "6.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "6.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "6.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "7.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "7.0" }
+          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "7.0" }
+          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "7.0" }
+          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "7.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "7.0" }
+          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "7.0" }
     steps:
       - name: Set up MongoDB ${{ matrix.entry.mongodb }}
         uses: supercharge/mongodb-github-action@1.8.0

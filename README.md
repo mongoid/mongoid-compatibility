@@ -46,7 +46,7 @@ Mongoid::Compatibility::Version.mongoid8?
   # => is this Mongoid 8.x?
 ```
 
-Instead of checking for Mongoid 6 and 7 and 8, use `newer` and `older` helpers.
+Instead of checking specifically for a specific version, use `newer` and `older` helpers. For example:
 
 ``` ruby
 Mongoid::Compatibility::Version.mongoid6_or_newer?
