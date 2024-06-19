@@ -1,5 +1,6 @@
 ### 1.0.0 (2024/06/19)
 
+* [#17](https://github.com/mongoid/mongoid-compatibility/pull/17): Test MongoDB 6 and 7 - [@saisrinivasan](https://github.com/SairamSrinivasan).
 * [#16](https://github.com/mongoid/mongoid-compatibility/pull/16): Add support for Mongoid 9 - [@saisrinivasan](https://github.com/SairamSrinivasan).
 
 ### 0.6.0 (2022/08/18)
