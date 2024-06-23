@@ -5,79 +5,64 @@ on: [push, pull_request]
 jobs:
   build:
     name: >-
-      Mongoid Test with: - Ruby ${{ matrix.entry.ruby }} - MongoDB ${{ matrix.entry.mongodb }} - Gemfile ${{ matrix.entry.gemfile }})
+      Mongoid Test with: - Ruby ${{ matrix.ruby }} - MongoDB ${{ matrix.mongodb }} - Gemfile ${{ matrix.gemfile }})
     env:
       CI: true
       TESTOPTS: "-v"
-      BUNDLE_GEMFILE: gemfiles/${{ matrix.entry.gemfile }}.gemfile
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
     runs-on: ubuntu-latest
     continue-on-error: false
     strategy:
+      max-parallel: 4
       matrix:
-        entry:
-          - { ruby: "2.6", gemfile: 'mongoid_3', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_4', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_4', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_5', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_5', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "3.6" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "3.6" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "3.6" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "3.6" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.2" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.2" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.2" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.2" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "4.4" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "4.4" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "4.4" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "4.4" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "5.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "5.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "5.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "5.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "5.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "5.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "5.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "6.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "6.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "6.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "6.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "6.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "6.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "6.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_6', mongodb: "7.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "7.0" }
-          - { ruby: "2.6", gemfile: 'mongoid_7', mongodb: "7.0" }
-          - { ruby: "2.7", gemfile: 'mongoid_7', mongodb: "7.0" }
-          - { ruby: "3.0", gemfile: 'mongoid_8', mongodb: "7.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "7.0" }
-          - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "7.0" }
+        ruby: ["2.6", "2.7", "3.0", "3.1"]
+        gemfile: ["mongoid_3", "mongoid_4", "mongoid_5", "mongoid_6", "mongoid_7", "mongoid_8", "mongoid_9"]
+        mongodb: ["4.0", "5.0", "6.0", "7.0"]
+        exclude:
+          # Exclusion rules for incompatible versions ordered by ruby version, gemfile, and mongodb version
+          - { ruby: "2.6", gemfile: "mongoid_3" }
+          - { ruby: "2.6", gemfile: "mongoid_9" }
+          - { ruby: "2.6", gemfile: "mongoid_4", mongodb: "6.0" }
+          - { ruby: "2.6", gemfile: "mongoid_4", mongodb: "7.0" }
+          - { ruby: "2.6", gemfile: "mongoid_8", mongodb: "4.0" }
+          - { ruby: "2.6", gemfile: "mongoid_8", mongodb: "5.0" }
+          - { ruby: "2.6", gemfile: "mongoid_8", mongodb: "6.0" }
+          - { ruby: "2.7", gemfile: "mongoid_3" }
+          - { ruby: "2.7", gemfile: "mongoid_4" }
+          - { ruby: "2.7", gemfile: "mongoid_5" }
+          - { ruby: "3.0", gemfile: "mongoid_3" }
+          - { ruby: "3.0", gemfile: "mongoid_4" }
+          - { ruby: "3.0", gemfile: "mongoid_5" }
+          - { ruby: "3.0", gemfile: "mongoid_6" }
+          - { ruby: "3.1", gemfile: "mongoid_3" }
+          - { ruby: "3.1", gemfile: "mongoid_4" }
+          - { ruby: "3.1", gemfile: "mongoid_5" }
+          - { ruby: "3.1", gemfile: "mongoid_6" }
     steps:
-      - name: Set up MongoDB ${{ matrix.entry.mongodb }}
+      - name: Cache Gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+            
+      - name: Set up MongoDB ${{ matrix.mongodb }}
         uses: supercharge/mongodb-github-action@1.8.0
         with:
-          mongodb-version: ${{ matrix.entry.mongodb }}
+          mongodb-version: ${{ matrix.mongodb }}
+
       - uses: actions/checkout@v3
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.entry.ruby }}
+          ruby-version: ${{ matrix.ruby }}
           bundler: '2'
           bundler-cache: true
+      
+      - name: Install dependencies
+        run: bundle install
+
       - name: Run tests
         run: bundle exec rake

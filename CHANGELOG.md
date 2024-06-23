@@ -1,4 +1,5 @@
 ### 1.1.0 (Next)
+* [#19](https://github.com/mongoid/mongoid-compatibility/pull/19): Run unit tests using matrix - [@saisrinivasan](https://github.com/SairamSrinivasan).
 * Your contribution here.
 
 ### 1.0.0 (2024/06/19)
