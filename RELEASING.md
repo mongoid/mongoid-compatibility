@@ -51,7 +51,7 @@ Add the next release to [CHANGELOG.md](CHANGELOG.md).
 * Your contribution here.
 ```
 
-Increment the minor version, modify [lib/mongoid/compatibility/self.rb](lib/mongoid/compatibility/self.rb').
+Increment the minor version, modify [lib/mongoid/compatibility/self.rb](lib/mongoid/compatibility/self.rb).
 
 Commit your changes.
 
