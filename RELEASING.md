@@ -41,3 +41,22 @@ Generally, `mongoid-compatibility` should be released with enthusiasm but care. 
     #=> Pushed git commits and tags.
     #=> Pushed mongoid-compatibility 0.4.0 to rubygems.org.
     ```
+## Prepare for the Next Version
+
+Add the next release to [CHANGELOG.md](CHANGELOG.md).
+
+```
+### 1.1.0 (Next)
+
+* Your contribution here.
+```
+
+Increment the minor version, modify [lib/mongoid/compatibility/self.rb](lib/mongoid/compatibility/self.rb').
+
+Commit your changes.
+
+```
+git add CHANGELOG.md lib/mongoid/compatibility/self.rb'
+git commit -m "Setting up next release, 1.1.0."
+git push origin master
+```

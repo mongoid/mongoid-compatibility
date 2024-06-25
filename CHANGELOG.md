@@ -1,3 +1,6 @@
+### 1.1.0 (Next)
+* Your contribution here.
+
 ### 1.0.0 (2024/06/19)
 
 * [#18](https://github.com/mongoid/mongoid-compatibility/pull/18): Test MongoDB 6 and 7 - [@saisrinivasan](https://github.com/SairamSrinivasan).
