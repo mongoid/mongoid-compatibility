@@ -68,6 +68,13 @@ jobs:
           - { ruby: "3.1", gemfile: 'mongoid_8', mongodb: "7.0" }
           - { ruby: "3.1", gemfile: 'mongoid_9', mongodb: "7.0" }
     steps:
+      - name: Cache Gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
       - name: Set up MongoDB ${{ matrix.entry.mongodb }}
         uses: supercharge/mongodb-github-action@1.8.0
         with:
