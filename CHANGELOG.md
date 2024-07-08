@@ -1,5 +1,6 @@
 ### 1.1.0 (Next)
 * Your contribution here.
+* [#20](https://github.com/mongoid/mongoid-compatibility/pull/20): Add gem caching to CI - [@saisrinivasan](https://github.com/SairamSrinivasan).
 
 ### 1.0.0 (2024/06/19)
 
