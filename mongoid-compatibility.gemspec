@@ -19,7 +19,11 @@ Gem::Specification.new do |s|
   s.add_dependency 'mongoid', '>= 2.0'
 
   s.add_development_dependency 'appraisal', '~> 2.0'
-  s.add_development_dependency 'rake', '< 12'
+  s.add_development_dependency 'ostruct'
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rubocop', '~> 1.36.0'
+  s.add_development_dependency 'rubocop-rake'
+  s.add_development_dependency 'rubocop-rspec'
+  s.metadata['rubygems_mfa_required'] = 'true'
 end
