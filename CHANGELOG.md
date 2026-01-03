@@ -1,5 +1,6 @@
 ### 1.1.0 (Next)
 * Your contribution here.
+* [#21](https://github.com/mongoid/mongoid-compatibility/pull/21): Migrate Danger to use danger-pr-comment workflow - [@dblock](https://github.com/dblock).
 * [#20](https://github.com/mongoid/mongoid-compatibility/pull/20): Add gem caching to CI - [@saisrinivasan](https://github.com/SairamSrinivasan).
 
 ### 1.0.0 (2024/06/19)
