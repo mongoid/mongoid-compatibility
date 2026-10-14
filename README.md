@@ -2,8 +2,10 @@ Mongoid::Compatibility
 =======================
 
 [![Gem Version](http://img.shields.io/gem/v/mongoid-compatibility.svg)](http://badge.fury.io/rb/mongoid-compatibility)
-[![Build Status](https://github.com/mongoid/mongoid-compatibility/actions/workflows/test.yml/badge.svg)](https://github.com/mongoid/mongoid-compatibility/actions)
-[![Code Climate](https://codeclimate.com/github/mongoid/mongoid-compatibility.svg)](https://codeclimate.com/github/mongoid/mongoid-compatibility)
+[![Build Status](https://github.com/mongoid/mongoid-compatibility/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/mongoid/mongoid-compatibility/actions/workflows/test.yml?query=branch%3Amaster)
+[![Coverage Status](https://coveralls.io/repos/github/mongoid/mongoid-compatibility/badge.svg?branch=master)](https://coveralls.io/github/mongoid/mongoid-compatibility?branch=master)
+
+CI collects SimpleCov coverage on Ruby 3.4 with Mongoid 9 and MongoDB 8.0 and submits one report to Coveralls using GitHub's workflow token. To generate a local report, run `COVERAGE=true BUNDLE_GEMFILE=gemfiles/mongoid_9.gemfile bundle install` followed by `COVERAGE=true BUNDLE_GEMFILE=gemfiles/mongoid_9.gemfile bundle exec rake spec`. Reports are written to `coverage/`.
 
 [Tested](https://github.com/mongoid/mongoid-compatibility/actions) against:
 - MRI: `2.6.x`, `2.7.x`, `3.0.x`, `3.1.x`
