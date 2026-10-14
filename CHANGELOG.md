@@ -1,5 +1,6 @@
 ### 1.1.0 (Next)
 * Your contribution here.
+* [#22](https://github.com/mongoid/mongoid-compatibility/pull/22): Modernize CI with representative MongoDB 3.6–8.0, Mongoid 3–9, and Ruby 2.6–4.0 coverage - [@dblock](https://github.com/dblock).
 * [#21](https://github.com/mongoid/mongoid-compatibility/pull/21): Migrate Danger to use danger-pr-comment workflow - [@dblock](https://github.com/dblock).
 * [#20](https://github.com/mongoid/mongoid-compatibility/pull/20): Add gem caching to CI - [@saisrinivasan](https://github.com/SairamSrinivasan).
 
