@@ -1,3 +1,7 @@
+### 1.1.1 (Next)
+
+* Your contribution here.
+
 ### 1.1.0 (2026/10/18)
 * [#24](https://github.com/mongoid/mongoid-compatibility/pull/24): Cover supported require aliases and the public gem version - [@dblock](https://github.com/dblock).
 * [#23](https://github.com/mongoid/mongoid-compatibility/pull/23): Replace Code Climate with SimpleCov and Coveralls reporting in CI and update status badges - [@dblock](https://github.com/dblock).
