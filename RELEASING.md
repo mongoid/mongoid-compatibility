@@ -10,7 +10,7 @@ Generally, `mongoid-compatibility` should be released with enthusiasm but care. 
     rake
     ```
 
-2. Run the test suite on [Travis](https://travis-ci.org) to be certain that your changes work in a variety of environments. Only merge and release when all tests are passing.
+2. Wait for the release preparation commit's [GitHub Actions](https://github.com/mongoid/mongoid-compatibility/actions) checks to pass before publishing.
 
 3. Bump the version in [`lib/mongoid/compatibility/self.rb`](lib/mongoid/compatibility/self.rb).
 
@@ -46,17 +46,17 @@ Generally, `mongoid-compatibility` should be released with enthusiasm but care. 
 Add the next release to [CHANGELOG.md](CHANGELOG.md).
 
 ```
-### 1.1.0 (Next)
+### 1.1.1 (Next)
 
 * Your contribution here.
 ```
 
-Increment the minor version, modify [lib/mongoid/compatibility/self.rb](lib/mongoid/compatibility/self.rb).
+Increment the development patch version in [lib/mongoid/compatibility/self.rb](lib/mongoid/compatibility/self.rb).
 
 Commit your changes.
 
 ```
-git add CHANGELOG.md lib/mongoid/compatibility/self.rb'
-git commit -m "Setting up next release, 1.1.0."
+git add CHANGELOG.md lib/mongoid/compatibility/self.rb
+git commit -m "Setting up next release, 1.1.1."
 git push origin master
 ```
