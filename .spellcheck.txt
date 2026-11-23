@@ -1,5 +1,6 @@
 activesupport
 asadsf
+Bundler
 CHANGELOG
 Changelog
 ClassMethods
@@ -7,12 +8,15 @@ config
 dblock
 Doubrovkine
 Gemfile
+gemspec
 joeyAghion
+JRuby
 linter
 md
 mongodb
 Mongoid
 mongoid
+MongoidCompatibilityRelease
 mongoidX
 moodlemags
 nitpicky
@@ -20,6 +24,7 @@ ObjectId
 ostruct
 phyllisstein
 prerelease
+Rakefile
 rb
 README
 Rebase
