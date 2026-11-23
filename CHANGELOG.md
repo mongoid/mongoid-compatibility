@@ -1,8 +1,10 @@
 ### 1.1.1 (Next)
 
 * Your contribution here.
+* [#25](https://github.com/mongoid/mongoid-compatibility/pull/25): Lint Markdown, YAML, and spelling with rubocop-md, rubocop-prose, rubocop-spellcheck, and rubocop-yaml in a separate Lint workflow, and clean up documentation - [@dblock](https://github.com/dblock).
 
 ### 1.1.0 (2026/10/18)
+
 * [#24](https://github.com/mongoid/mongoid-compatibility/pull/24): Cover supported require aliases and the public gem version - [@dblock](https://github.com/dblock).
 * [#23](https://github.com/mongoid/mongoid-compatibility/pull/23): Replace Code Climate with SimpleCov and Coveralls reporting in CI and update status badges - [@dblock](https://github.com/dblock).
 * [#22](https://github.com/mongoid/mongoid-compatibility/pull/22): Modernize CI with representative MongoDB 3.6–8.0, Mongoid 3–9, and Ruby 2.6–4.0 coverage - [@dblock](https://github.com/dblock).
