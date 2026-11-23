@@ -1,10 +1,60 @@
+plugins:
+- rubocop-md
+- rubocop-prose
+- rubocop-rake
+- rubocop-rspec
+- rubocop-spellcheck
+- rubocop-yaml
+
+inherit_from: ".rubocop_todo.yml"
+
 AllCops:
   NewCops: enable
   Exclude:
-    - vendor/**/*
+  - vendor/**/*
+  - coverage/**/*
+  - pkg/**/*
+  SuggestExtensions: false
+  inherit_mode:
+    merge:
+    - Include
+  Include:
+  - ".github/**/*.yml"
+  - ".rubocop.yml"
 
-inherit_from: .rubocop_todo.yml
+YAML/Lint/InvalidSyntax:
+  Include:
+  - "**/*.yml"
+  - "**/*.yaml"
 
-require:
-  - rubocop-rake
-  - rubocop-rspec
+YAML/Lint/DuplicateKey:
+  Include:
+  - "**/*.yml"
+  - "**/*.yaml"
+
+Naming/FileName:
+  inherit_mode:
+    merge:
+    - Exclude
+  Exclude:
+  - "**/*.md"
+  - ".github/workflows/*.yml"
+  - lib/mongoid-compatibility.rb
+
+Markdown/HeadingCapitalization:
+  Enabled: true
+  Style: title_case
+
+Prose/MaxLength:
+  Max: false
+  Exclude:
+  - LICENSE.md
+
+Spellcheck:
+  DictionaryFiles:
+    en:
+    - gem:rubocop-spellcheck/data/en/en.dic
+    - ".spellcheck.txt"
+Spellcheck/Spelling:
+  Exclude:
+  - LICENSE.md
