@@ -1,11 +1,18 @@
 name: CI RSpec Test
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [master]
+  pull_request:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     name: Ruby ${{ matrix.entry.ruby }} / Mongoid ${{ matrix.entry.mongoid }} / MongoDB ${{ matrix.entry.mongodb }}
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       BUNDLE_BUILD__BSON: --with-cflags=-Wno-error=implicit-function-declaration
       CI: true
