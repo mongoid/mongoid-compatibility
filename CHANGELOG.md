@@ -3,6 +3,7 @@
 * Your contribution here.
 * [#25](https://github.com/mongoid/mongoid-compatibility/pull/25): Lint Markdown, YAML, and spelling with rubocop-md, rubocop-prose, rubocop-spellcheck, and rubocop-yaml in a separate Lint workflow, and clean up documentation - [@dblock](https://github.com/dblock).
 * [#26](https://github.com/mongoid/mongoid-compatibility/pull/26): Run CI pushes only on the default branch, cancel superseded pull request runs, skip duplicate lint in the test matrix, and bound job times - [@dblock](https://github.com/dblock).
+* [#27](https://github.com/mongoid/mongoid-compatibility/pull/27): Release with ruby-gem-release from a manually dispatched GitHub Actions workflow using RubyGems Trusted Publishing, with dry runs - [@dblock](https://github.com/dblock).
 
 ### 1.1.0 (2026/10/18)
 
