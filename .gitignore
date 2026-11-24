@@ -3,3 +3,4 @@ pkg
 gemfiles/*.gemfile.lock
 coverage/
 /vendor/bundle
+/.bundle
