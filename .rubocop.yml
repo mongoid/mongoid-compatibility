@@ -73,3 +73,11 @@ RSpec/ExampleLength:
       - Exclude
   Exclude:
     - spec/release/release_spec.rb
+
+Layout/LineLength:
+  inherit_mode:
+    merge:
+      - Exclude
+  Exclude:
+    # Reusable workflows are pinned by full commit SHA with a version comment, which cannot be wrapped.
+    - '.github/workflows/*.yml'
