@@ -7,6 +7,7 @@ jobs:
     name: Ruby ${{ matrix.entry.ruby }} / Mongoid ${{ matrix.entry.mongoid }} / MongoDB ${{ matrix.entry.mongodb }}
     runs-on: ubuntu-latest
     env:
+      BUNDLE_BUILD__BSON: --with-cflags=-Wno-error=implicit-function-declaration
       CI: true
       COVERAGE: ${{ matrix.entry.coverage }}
       BUNDLE_GEMFILE: gemfiles/mongoid_${{ matrix.entry.mongoid }}.gemfile

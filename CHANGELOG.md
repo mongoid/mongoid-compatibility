@@ -1,5 +1,6 @@
 ### 1.1.1 (Next)
 
+* [#29](https://github.com/mongoid/mongoid-compatibility/pull/29): Upgrade danger-pr-comment to 0.3.0 from the `danger` organization and skip empty Danger report comments - [@dblock](https://github.com/dblock).
 * Your contribution here.
 
 ### 1.1.0 (2026/10/18)
